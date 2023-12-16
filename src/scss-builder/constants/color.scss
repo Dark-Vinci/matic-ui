@@ -1,4 +1,5 @@
-$w: white;
+$w: var(--color-white, #ffffff);
 $b: var(--color-black, black);
 $footer-text-color: var(--footer-text-color, #C6C4BA);
 $bgc: var(--background-color, #353638);
+$bt-c: var(--button-color, #1F2022)
