@@ -3,3 +3,23 @@
     border: 2px solid $color;
 }
 
+@mixin Border($width: 2px, $radius: none, $color: black) {
+    @if $width = none {
+        border-radius: $radius;
+        border: none;
+    } @else {
+        border: $width solid $color;
+        border-radius: $radius;
+    }
+}
+
+@mixin Square($l: 20px) {
+    width: $l;
+    height: $l;
+}
+
+@mixin NoMarginOrPadding {
+    padding: 0px;
+    margin: 0px;
+}
+
