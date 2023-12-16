@@ -49,5 +49,5 @@ export function HomePage(): JSX.Element {
                 <Footer />
             </footer>
         </div>
-    )
+    );
 }
