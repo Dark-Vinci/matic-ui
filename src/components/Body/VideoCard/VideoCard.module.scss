@@ -1,0 +1,40 @@
+@import "../../../scss-builder/mixins/layout.scss";
+@import "../../../scss-builder/mixins/border.scss";
+@import "../../../scss-builder/mixins/center.scss";
+@import "../../../scss-builder/constants/color.scss";
+
+div.container {
+    // @include Debug(white);
+    width: calc(100vw - 130px);
+    height: calc(100vh - 80px);
+
+    & > div.video_container {
+        position: relative;
+        // @include Debug();
+        width: 100%;
+        height: 100%;
+
+        & > div.vid_container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // @include Debug(rgb(12, 151, 172));
+            
+            & video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 30px;
+            }
+        }
+
+        & > div.children_container {
+            position: absolute;
+            // @include Debug(rgb(12, 172, 76));
+            @include Square(100%);
+            @include GridCenter;
+        }
+    }
+}
