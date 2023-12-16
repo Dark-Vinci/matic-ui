@@ -1,0 +1,30 @@
+// @import "../scss-builder/mixins/layout.scss";
+@import "../scss-builder/mixins/border.scss";
+// @import "../scss-builder/mixins/center.scss";
+// @import "../scss-builder/constants/color.scss";
+
+div.container {
+    width: 100vw;
+
+    & > nav {
+        height: auto;
+    }
+
+    & > header {
+        min-height: 900px;
+        background-color: aqua;
+        @include Debug(blue);
+    }
+
+    & > body {
+        min-height: 5000px;
+        background-color: red;
+        @include Debug(green);
+    }
+
+    & > footer {
+        min-height: calc(100vh + 100px);
+        background-color: #858f13;
+        @include Debug(rgb(0, 0, 128));
+    }
+}
