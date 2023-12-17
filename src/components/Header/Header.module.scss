@@ -1,0 +1,92 @@
+@import "../../scss-builder/mixins/layout.scss";
+@import "../../scss-builder/mixins/border.scss";
+@import "../../scss-builder/mixins/center.scss";
+@import "../../scss-builder/constants/color.scss";
+
+div.container_h {
+    // @include Debug(rgb(16, 231, 37));
+    @include Square(100%);
+    @include GridCenter;
+    color: white;
+
+    & > div.header_container_h {
+        @include Square(100%);
+        position: relative;
+        height: 730px;
+        width: 100vw;
+
+        & > div {
+            @include Square(100%);
+            position: absolute;
+        }
+
+        & > div.content_h {
+            // @include Debug(rgb(255, 255, 255));
+            @include Flex(row, flex-start, flex-end);
+
+            & > div.content_container {
+                width: 740px;
+                height: 270px;
+                // @include Debug(rgb(169, 22, 22));
+                margin: 0px 0px 70px 70px;
+
+                @include Flex(column);
+
+                & > div {
+                    flex-basis: calc(100%/3);
+                    @include Square(100%);
+                    // @include Debug(rgb(22, 169, 49));
+                    @include Flex(row, flex-start, flex-end);
+                }
+
+                & > div.button {
+                    button {
+                        background-color: $bt-c;
+                        color: white;
+                        width: 260px;
+                        height: 60px;
+                        font-size: 20px;
+                        @include Border(none, 40px);
+                        background-color: white;
+                        color: black;
+    
+                        &:hover {
+                            @include Border(1px, 40px, white);
+                            background-color: $bt-c;
+                            color: white;
+                            border: none;
+                        }
+                    }
+                }
+
+                & > div.head {
+                    p {
+                        font-size: 20px;
+                    }
+                }
+
+                & > div.description {
+                    text-align: left;
+                    p {
+                        font-size: 53px;
+                    }
+                }
+
+
+            }
+        }
+
+        & > div.video_container_h {
+            // @include Debug(rgb(0, 86, 0));
+            @include Square(100%);
+            top: 0;
+            left: 0;
+
+            & video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
