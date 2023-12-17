@@ -8,8 +8,6 @@ import { Numbered } from './Numbered';
 const a = ['Playing hide-and-seek', 'Cooking meals together', 'Stargazing in the backyard', 'hosting game night'];
 const color = ['#016759', '#692729', 'rgb(2, 0, 128)', '#3E5A25'];
 
-const nb = ['Post dinner clean.', 'Movie night.', 'After school snack.', 'Dog back from walk.'];
-
 interface Anim {
     readonly imgUrl: string;
     readonly text: string;
@@ -48,7 +46,7 @@ function MiniCard(): JSX.Element {
             style={{ width: '640px', height: '160px', borderRadius: '30px'}}
         >
             <div className="min_container">
-                
+
             </div>
         </div>
     );
