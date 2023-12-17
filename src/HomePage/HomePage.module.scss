@@ -5,20 +5,4 @@ div.container {
     & > nav {
         height: auto;
     }
-
-    // & > header {
-    //     // min-height: 900px;
-    //     // background-color: aqua;
-    //     // @include Debug(blue);
-    // }
-
-    // & > body {
-    //     // min-height: 5000px;
-    //     // background-color: red;
-    //     // @include Debug(green);/
-    // }
-
-    & > footer {
-        background-color: #858f13;
-    }
 }
