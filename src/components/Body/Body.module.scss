@@ -77,6 +77,14 @@ div.container {
         }
     }
 
+    & > div.review {
+        @include Debug(rgb(87, 32, 197));
+    }
+
+    & > div.future {
+        @include Debug(rgb(32, 197, 137));
+    }
+
     & > div.w01 {
         // @include Debug(rgb(87, 32, 197));
         @include GridCenter;

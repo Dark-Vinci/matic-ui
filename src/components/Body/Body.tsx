@@ -260,8 +260,17 @@ export function Body(): JSX.Element {
                 </div>
             </div>
 
-            <div className={ style.review }>review</div>
-            <div className={ style.future }>future</div>
+            <div className={ style.review }>
+                <div className={ style.review_container }>
+                    @import "../../scss-builder/mixins/layout.scss"
+                </div>
+            </div>
+
+            <div className={ style.future }>
+                <div className={ style.review_container }>
+                    @import "../../scss-builder/mixins/layout.scss"
+                </div>
+            </div>
 
             <div className={ style.last }>
                 <div className={ style.last_container }>
