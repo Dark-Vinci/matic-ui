@@ -2,7 +2,5 @@
 @import "../scss-builder/mixins/layout.scss";
 
 div.container {
-    & > nav {
-        height: auto;
-    }
+    height: auto;
 }
