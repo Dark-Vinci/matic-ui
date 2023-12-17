@@ -18,8 +18,36 @@ div.container {
     }
 
     & > div.mini_card_1 {
+        max-width: 100vw;
+        margin-top: 100px;
+        // width: 100%;
+        @include Square(100%);
         & > div.mini_card_1_container {
-            @include Square(100vw)
+            margin-top: 100px;
+            max-width: 100vw;
+            @include Square(100vw);
+            position: relative;
+
+            & > div {
+                position: absolute;
+            }
+
+            & > div.f {
+                top: 10px;
+                right: 700px;
+            }
+
+            & > div.s {
+                top: 500px;
+                left: 100px;
+            }
+
+            & > div.l {
+                top: 800px;
+                // left: 100px;
+                right: 600px;
+            }
+            // @include Flex(column, space-around, center);
         }
     }
 

@@ -2,6 +2,7 @@ import { JSX, useEffect, useState } from 'react';
 
 import style from './Body.module.scss'
 import { VideoCard } from './VideoCard';
+import { MiniImageCard } from './MiniImageCard';
 
 const a = ['Playing hide-and-seek', 'Cooking meals together', 'Stargazing in the backyard', 'hosting game night'];
 const color = ['#016759', '#692729', 'rgb(2, 0, 128)', '#3E5A25']
@@ -64,7 +65,33 @@ export function Body(): JSX.Element {
 
             <div className={ style.mini_card_1 }>
                 <div className={ style.mini_card_1_container }>
-                    the center;
+                    <div className={ style.f }>
+                        <MiniImageCard
+                            url='https://videos.ctfassets.net/6p328xbjc78k/1laowUZiYMioYNcJ5sHudz/eb744ebba2e88202d49450360e2ca866/cutting-edge-mess-and-surface-detection-v1.mp4'
+                            content='Cutting-edge mess and surface detection'
+                            contentBackgroundColor='#FFDFD0'
+                            length='480px'
+                        />
+                        fitst
+                    </div>
+
+                    <div className={ style.s }>
+                        <MiniImageCard
+                            url='https://videos.ctfassets.net/6p328xbjc78k/Bln7bJwlQC8rSbayqS00p/7d67623b67ed417ca6cdef4b5f712380/works-on-all-home-surfaces-v1.mp4'
+                            content='Works on all floor surfaces'
+                            contentBackgroundColor='#FFDFD0'
+                            length='560px'
+                        />
+                    </div>
+
+                    <div className={ style.l }>
+                        <MiniImageCard
+                            url='https://videos.ctfassets.net/6p328xbjc78k/50ZAQSwP8O9YwfahgtZxKV/885c8b31d7446fbee4c7f72cb7a86853/auto-toggles-between_mopping-and_vacuuming-video-v1.mp4'
+                            content='Auto-toggles between mopping and vacuuming'
+                            contentBackgroundColor='#FFDFD0'
+                            length='560px'
+                        />
+                    </div>
                 </div>
             </div>
 

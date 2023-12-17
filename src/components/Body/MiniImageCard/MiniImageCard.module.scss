@@ -4,5 +4,43 @@
 @import "../../../scss-builder/constants/color.scss";
 
 div.container {
-    @include Debug();
+    @include Debug(blue);
+    @include GridCenter;
+
+    & > div.card_container {
+        @include Debug(rgb(0, 255, 128));
+        position: relative;
+
+        & > div.content {
+            position: absolute;
+            top: -40px;
+            left: -40px;
+
+            & > div.content_container {
+                width: 240px;
+                height: 160px;
+                border-radius: 20px;
+                @include Flex();
+
+                p {
+                    margin: 0 20px 0 20px;
+                    font-size: 25px;
+                }
+            }
+        }
+
+        & > div.video_container {
+            @include Debug(rgb(255, 0, 238));
+            @include Square(100%);
+            @include NoMarginOrPadding;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            & > video {
+                object-fit: fill;
+                border-radius: 20px;
+            }
+        }
+    }
 }
