@@ -1,4 +1,5 @@
 import { JSX, useEffect, useState } from 'react';
+import { MdArrowForward } from "react-icons/md";
 
 import style from './Body.module.scss'
 import { VideoCard } from './VideoCard';
@@ -268,7 +269,51 @@ export function Body(): JSX.Element {
 
             <div className={ style.future }>
                 <div className={ style.review_container }>
-                    @import "../../scss-builder/mixins/layout.scss"
+                    <div className="content">
+                        <div className="title">
+                            The future of robotics comes home.
+                        </div>
+                        <div className="description">
+                            Matic was founded by two busy fathers who love technology and hate cleaning. With decades of engineering experience, they’re on a mission to solve everyday problems with remarkable robotics.
+                        </div>
+
+                        <div className="link">
+                            <a href=".">Interested in Matic? Work with us</a>
+                            <button>
+                                <MdArrowForward
+                                    size={'20px'}
+                                />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className={style.image_1 }>
+                        <img 
+                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F6t3qnMrakNUuBwUFZvUcpr%2Ff029991809a51831c884fb0521a84c6a%2Fcofounders.jpg&w=3840&q=75" 
+                            alt="image_1" 
+                        />
+                    </div>
+
+                    <div className={style.image_2 }>
+                        <img 
+                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F2bl1gqGS3tCMZEzNhmlKOb%2F7804633279273a418ac39d58dcb13bf3%2Fme-2.webp&w=3840&q=75" 
+                            alt="image_2" 
+                        />
+                    </div>
+
+                    <div className={style.image_3 }>
+                        <img 
+                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F6HrfQS8yuRq8MAJC0I2xQ7%2F1bef7fbdd4658e3d3f55486563bfd2b2%2Fteam-photo.jpg&w=3840&q=75" 
+                            alt="image_3" 
+                        />
+                    </div>
+
+                    <div className={style.image_4 }>
+                        <img 
+                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F4vpkj2dmSoQbbhMl2Xw1kn%2F7ada7eca3e2ed2296bec4660a20f53b5%2Fapril.jpg&w=2048&q=75" 
+                            alt="image_4" 
+                        />
+                    </div>
                 </div>
             </div>
 
