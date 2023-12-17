@@ -9,7 +9,6 @@ interface VideoCardProps {
 }
 
 export function VideoCard({ url, type, children }: VideoCardProps): JSX.Element {
-    console.log({url})
     return (
         <div className={ style.container}>
             <div className={ style.video_container }>

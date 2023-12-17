@@ -15,7 +15,6 @@ export function HomePage(): JSX.Element {
     const handleScroll = () => {
       // Get the current scroll height
       const currentScrollHeight = window.scrollY || document.documentElement.scrollTop;
-      console.log({currentScrollHeight })
 
       // Update the state with the current scroll height
       setScrollHeight(currentScrollHeight);
