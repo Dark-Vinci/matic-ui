@@ -13,7 +13,6 @@ export function HomePage(): JSX.Element {
 
   useEffect(() => {
     const handleScroll = () => {
-        // console.log({scrollHeight})
       // Get the current scroll height
       const currentScrollHeight = window.scrollY || document.documentElement.scrollTop;
       console.log({currentScrollHeight })
