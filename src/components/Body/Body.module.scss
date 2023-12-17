@@ -10,7 +10,7 @@ div.container {
     @include Flex(column, center, center);
 
     & > div {
-        @include Debug(white);
+        // @include Debug(white);
         width: 100vw;
         margin-bottom: 50px;
         background-color: white;
@@ -188,27 +188,44 @@ div.container {
     }
 
     & > div.review {
-        @include Debug(rgb(87, 32, 197));
+        // @include Debug(rgb(87, 32, 197));
+        max-width: 100vw;
         height: 940px;
         // w
 
         & > div.review_container {
-            @include Debug(rgb(32, 197, 139));
-            display: grid;
-            grid-template-columns: repeat(18, 1fr);
+            // @include Debug(rgb(32, 197, 139));
             height: 100%;
+            max-width: 100vw;
+            position: relative;
 
-            & > div.grid-item {
-                background-color: #f0f0f0;
-                padding: 20px;
-                border: 1px solid #ccc;
-                text-align: center;
+            & > div.grid {
+                position: absolute;
+                display: grid;
+                grid-template-columns: repeat(18, 1fr);
+                z-index: 1;
+                max-width: 100vw;
+                top: 0;
+                right: 0;
+                left: 0;
+
+                & > div.grid_item {
+                    padding: 20px;
+                    border: 0.2px solid #cccccc78;
+                    text-align: center;
+                    width: auto;
+                    height: calc(100vw/18);
+                }
             }
 
             & > div.content {
+                z-index: 2;
+                position: absolute;
+                top: 0;
+                right: 0;
+
                 @include Square(100%);
                 & > div.container {
-                    // @include Square(100%);
                     height: 100%;
                     @include Flex();
 
@@ -219,6 +236,7 @@ div.container {
                         @include GridCenter;
                         border-radius: 50%;
                         color: black;
+                        background-color: transparent;
 
                         &:hover {
                             background-color: black;
@@ -228,10 +246,10 @@ div.container {
                     }
 
                     & > div.mid {
-                        // width: 50%;
-                        @include Debug();
+                        // @include Debug();
                         flex-basis: 70%;
                         @include GridCenter;
+                        background-color: transparent;
 
                         & > div.mid_container {
                             width: 90%;
@@ -244,17 +262,14 @@ div.container {
                             }
 
                             & > div:nth-child(1) {
-                                // height: 200px;
-                                // height: 200px;
-                                // width: 100%;
                                 @include GridCenter;
                                 @include Square(100px);
-                                @include Debug(green);
+                                // @include Debug(green);
                                 width: 100%;
 
                                 img {
                                     height: 100px;
-                                width: 130px;
+                                    width: 130px;
                                     object-fit: fill;
                                 }
                             }
@@ -279,14 +294,6 @@ div.container {
                                 }
                             }
                         }
-
-
-
-                        // & > div.cont {
-                        //     p {
-                        //         font-size: 70px;
-                        //     }
-                        // }
                     }
                 }
             }
@@ -300,8 +307,8 @@ div.container {
         & > div.mini_card_1 {
             max-width: 100vw;
             margin-top: 100px;
-            // width: 100%;
             @include Square(100%);
+
             & > div.mini_card_1_container {
                 margin-top: 100px;
                 max-width: 100vw;
@@ -437,7 +444,6 @@ div.container {
         height: 600px;
         width: calc(100vw - 130px);
         // @include Flex();
-        // border-top: 1px solid rgb(2, 0, 128);
 
         & div.message_container {
             height: 100%;
@@ -472,7 +478,6 @@ div.container {
 
                     @include Flex(column);
 
-                    // & > div {}
                     & > div {
                         flex-basis: calc(100%/3);
                         // @include Debug(rgb(0, 162, 255));

@@ -9,37 +9,37 @@ import { Numbered } from './Numbered';
 const a = ['Playing hide-and-seek', 'Cooking meals together', 'Stargazing in the backyard', 'hosting game night'];
 const color = ['#016759', '#692729', 'rgb(2, 0, 128)', '#3E5A25'];
 
-interface Anim {
-    readonly imgUrl: string;
-    readonly text: string;
-    readonly timing: string;
-}
+// interface Anim {
+//     readonly imgUrl: string;
+//     readonly text: string;
+//     readonly timing: string;
+// }
 
-const bbbbb: Array<Anim> = [
-    {
-        imgUrl: 'https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2Fm7a9X1YnkC3imclsoMqzo%2F7aaf7c0dc44d208227571f8a569ab188%2FBlockQouteVector2.png&w=3840&q=75',
-        text: 'Dog back from walk.',
-        timing: '9:30AM, LIVING ROOM, VACUUM',
-    },
+// const bbbbb: Array<Anim> = [
+//     {
+//         imgUrl: 'https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2Fm7a9X1YnkC3imclsoMqzo%2F7aaf7c0dc44d208227571f8a569ab188%2FBlockQouteVector2.png&w=3840&q=75',
+//         text: 'Dog back from walk.',
+//         timing: '9:30AM, LIVING ROOM, VACUUM',
+//     },
 
-    {
-        imgUrl: 'https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F5dwVaOwxnEIczD7N4Jjt8b%2Fa13302a9d39ab5e0b0882b044ceb56ee%2FBlocQouteVector1.png&w=3840&q=75',
-        text: 'After school snack.',
-        timing: '3:00PM, KITCHEN, MOP',
-    },
+//     {
+//         imgUrl: 'https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F5dwVaOwxnEIczD7N4Jjt8b%2Fa13302a9d39ab5e0b0882b044ceb56ee%2FBlocQouteVector1.png&w=3840&q=75',
+//         text: 'After school snack.',
+//         timing: '3:00PM, KITCHEN, MOP',
+//     },
 
-    {
-        imgUrl: 'https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F1X1BA9kny15hBQRw6yrOyZ%2F172327fa7d5dd516d30a315022e76f1d%2FBlockQuoteVector3.png&w=3840&q=75',
-        text: 'Movie night.',
-        timing: '10:27PM, LIVING ROOM, VACUUM',
-    },
+//     {
+//         imgUrl: 'https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F1X1BA9kny15hBQRw6yrOyZ%2F172327fa7d5dd516d30a315022e76f1d%2FBlockQuoteVector3.png&w=3840&q=75',
+//         text: 'Movie night.',
+//         timing: '10:27PM, LIVING ROOM, VACUUM',
+//     },
 
-    {
-        imgUrl: 'https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2FjFq3fROIGsRUs3lEayLtK%2Fdcc2a1e32afb2ebb3586f60d370604af%2FBlockQuoteVector4.png&w=3840&q=75',
-        text: 'Post dinner clean.',
-        timing: '9:38PM, DINING ROOM, BOOTH',
-    }
-]
+//     {
+//         imgUrl: 'https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2FjFq3fROIGsRUs3lEayLtK%2Fdcc2a1e32afb2ebb3586f60d370604af%2FBlockQuoteVector4.png&w=3840&q=75',
+//         text: 'Post dinner clean.',
+//         timing: '9:38PM, DINING ROOM, BOOTH',
+//     }
+// ]
 
 export function MiniCard(): JSX.Element {
     return (
@@ -57,8 +57,6 @@ export function MiniCard(): JSX.Element {
 export function Body(): JSX.Element {
     let [toDisplay, setToDisplay] = useState(a[0]);
     let [animatedBackground, setToBackground] = useState(color[0]);
-    // let toDisplay = a[0];
-    // let i = 1;
 
     useEffect(() => {
         let i = 1;
@@ -212,7 +210,7 @@ export function Body(): JSX.Element {
 
                     <div className="t">
                         <div className="t_container">
-
+                            let see
                         </div>
                     </div>
                 </div>
@@ -252,9 +250,7 @@ export function Body(): JSX.Element {
                             </div>
                             <div className={style.mid}><p>{ toDisplay }</p></div>
                             <div className={style.last}>
-                                {/* <div className={style.last_container}> */}
-                                    <p className={style.last_container}>Matic saves the average family <span>an hour a day</span> on floor cleaning.</p>
-                                {/* </div> */}
+                                <p className={style.last_container}>Matic saves the average family <span>an hour a day</span> on floor cleaning.</p>
                             </div>
                         </div>
                     </div>
@@ -264,24 +260,17 @@ export function Body(): JSX.Element {
             <div className={ style.review }>
                 <div className={ style.review_container }>
                     <div className={style.grid}>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
-                        <div className={style.grid_item}></div>
+                        {
+                            Array(216).fill('G').map((el, i) => {
+                                return (
+                                    <div 
+                                        className={style.grid_item} 
+                                        key={i}
+                                    >
+                                    </div>
+                                );
+                            })
+                        }
                     </div>
 
                     <div className={style.content}>
@@ -290,7 +279,6 @@ export function Body(): JSX.Element {
                                 <MdArrowBack
                                     color='inherit'
                                     size='30px'
-                                    // fontSize='12px'
                                 />
                             </div>
 

@@ -1,26 +1,22 @@
 @import "../scss-builder/mixins/border.scss";
 @import "../scss-builder/mixins/layout.scss";
 
-// @import "../scss-builder/mixins/border.scss";
-// @import "../scss-builder/mixins/center.scss";
-// @import "../scss-builder/constants/color.scss";
-
 div.container {
     & > nav {
         height: auto;
     }
 
-    & > header {
-        // min-height: 900px;
-        background-color: aqua;
-        // @include Debug(blue);
-    }
+    // & > header {
+    //     // min-height: 900px;
+    //     // background-color: aqua;
+    //     // @include Debug(blue);
+    // }
 
-    & > body {
-        // min-height: 5000px;
-        // background-color: red;
-        @include Debug(green);
-    }
+    // & > body {
+    //     // min-height: 5000px;
+    //     // background-color: red;
+    //     // @include Debug(green);/
+    // }
 
     & > footer {
         background-color: #858f13;
