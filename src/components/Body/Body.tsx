@@ -1,5 +1,5 @@
 import { JSX, useEffect, useState } from 'react';
-import { MdArrowForward } from "react-icons/md";
+import { MdArrowForward, MdArrowBack } from "react-icons/md";
 
 import style from './Body.module.scss'
 import { VideoCard } from './VideoCard';
@@ -263,54 +263,117 @@ export function Body(): JSX.Element {
 
             <div className={ style.review }>
                 <div className={ style.review_container }>
-                    @import "../../scss-builder/mixins/layout.scss"
+                    <div className={style.grid}>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                        <div className={style.grid_item}></div>
+                    </div>
+
+                    <div className={style.content}>
+                        <div className={style.container}>
+                            <div className={style.arrow}>
+                                <MdArrowBack
+                                    color='inherit'
+                                    size='30px'
+                                    // fontSize='12px'
+                                />
+                            </div>
+
+                            <div className={style.mid}>
+                                <div className={ style.mid_container }>
+                                    <div>
+                                        <img 
+                                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F1X1BA9kny15hBQRw6yrOyZ%2F172327fa7d5dd516d30a315022e76f1d%2FBlockQuoteVector3.png&w=3840&q=75" 
+                                            alt="" 
+                                        />
+                                    </div>
+                                    <div className={style.cont}>
+                                        <p>"It stands out from other consumer option because of the privacy we offer."</p>
+                                    </div>
+
+                                    <div className={ style.logo }>
+                                        <div className={ style.round }>
+                                            ars
+                                        </div>
+                                        <p>TECHNICA</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={style.arrow}>
+                                <MdArrowForward
+                                    color='inherit'
+                                    size='30px'
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div className={ style.future }>
                 <div className={ style.review_container }>
-                    <div className="content">
-                        <div className="title">
-                            The future of robotics comes home.
-                        </div>
-                        <div className="description">
-                            Matic was founded by two busy fathers who love technology and hate cleaning. With decades of engineering experience, they’re on a mission to solve everyday problems with remarkable robotics.
-                        </div>
+                    <div className={style.content }>
+                        <div className={ style.content_container }>
+                            <div className={ style.title }>
+                                <p>The future of robotics comes home.</p>
+                            </div>
+                            <div className={ style.description }>
+                                Matic was founded by two busy fathers who love technology and hate cleaning. With decades of engineering experience, they’re on a mission to solve everyday problems with remarkable robotics.
+                            </div>
 
-                        <div className="link">
-                            <a href=".">Interested in Matic? Work with us</a>
-                            <button>
-                                <MdArrowForward
-                                    size={'20px'}
-                                />
-                            </button>
+                            <div className={style.link }>
+                                <a href=".">Interested in Matic? Work with us</a>
+                                <button>
+                                    <MdArrowForward
+                                        size={'20px'}
+                                        color='white'
+                                        // bac
+                                    />
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <div className={style.image_1 }>
+                    <div className={ style.image_1 }>
                         <img 
-                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F6t3qnMrakNUuBwUFZvUcpr%2Ff029991809a51831c884fb0521a84c6a%2Fcofounders.jpg&w=3840&q=75" 
+                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F2bl1gqGS3tCMZEzNhmlKOb%2F7804633279273a418ac39d58dcb13bf3%2Fme-2.webp&w=3840&q=75" 
                             alt="image_1" 
                         />
                     </div>
 
-                    <div className={style.image_2 }>
+                    <div className={ style.image_2 }>
                         <img 
-                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F2bl1gqGS3tCMZEzNhmlKOb%2F7804633279273a418ac39d58dcb13bf3%2Fme-2.webp&w=3840&q=75" 
+                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F6t3qnMrakNUuBwUFZvUcpr%2Ff029991809a51831c884fb0521a84c6a%2Fcofounders.jpg&w=3840&q=75" 
                             alt="image_2" 
                         />
                     </div>
 
-                    <div className={style.image_3 }>
+                    <div className={ style.image_3 }>
                         <img 
-                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F6HrfQS8yuRq8MAJC0I2xQ7%2F1bef7fbdd4658e3d3f55486563bfd2b2%2Fteam-photo.jpg&w=3840&q=75" 
+                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F4vpkj2dmSoQbbhMl2Xw1kn%2F7ada7eca3e2ed2296bec4660a20f53b5%2Fapril.jpg&w=2048&q=75" 
                             alt="image_3" 
                         />
                     </div>
 
-                    <div className={style.image_4 }>
+                    <div className={ style.image_4 }>
                         <img 
-                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F4vpkj2dmSoQbbhMl2Xw1kn%2F7ada7eca3e2ed2296bec4660a20f53b5%2Fapril.jpg&w=2048&q=75" 
+                            src="https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F6HrfQS8yuRq8MAJC0I2xQ7%2F1bef7fbdd4658e3d3f55486563bfd2b2%2Fteam-photo.jpg&w=3840&q=75" 
                             alt="image_4" 
                         />
                     </div>

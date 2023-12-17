@@ -18,8 +18,112 @@ div.container {
 
     & > div.future {
         & > div.review_container {
+            position: relative;
+            @include Flex(column);
             height: 824px;
             width: 100%;
+
+            & > div {
+                position: absolute;
+            }
+
+            & > div.content {
+                // @include Debug();
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                @include GridCenter;
+
+                & > div.content_container {
+                    // @include Debug(aqua);
+                    width: 40%;
+                    width: 590px;
+                    @include Flex(column);
+                    color: #1F2022;
+                    margin-top: 120px;
+
+                    & > div.link {
+                        // @include Debug(rgb(25, 0, 255));
+                        a {
+                            text-decoration: none;
+                            color: inherit;
+                        }
+
+                        button {
+                            @include Square(30px);
+                            margin-left: 10px;
+                            border-radius: 50%;
+                            background-color: #1F2022;
+                            border: none;
+                            cursor: pointer;
+                        }
+                    }
+
+                    & > div {
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+
+                    & > div.title {
+                        // @include Debug(rgb(2, 39, 39));
+                        width: 100%;
+
+                        & > p {
+                            font-size: 56px;
+                        }
+                    }
+
+                    & > div.description {
+                        // @include Debug(rgb(35, 2, 39));
+                        width: 605px;
+                        height: 85px;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            & > div:not(.content) {
+                
+                & > img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                    border-radius: 20px;
+                }
+            }
+
+            & > div.image_1 {
+                @include Square(280px);
+                // @include Debug(red);
+                top: 0;
+                left: 300px;
+            }
+
+            & > div.image_2 {
+                @include Square(240px);
+                top: 130px;
+                right: 200px;
+                z-index: 2;
+            }
+
+            & > div.image_3 {
+                // @include Square(240px);
+                width: 200px;
+                height: 350px;
+                top: 330px;
+                right: 70px;
+                z-index: 1;
+            }
+
+            & > div.image_4 {
+                // @include Square(240px);
+                width: 325px;
+                height: 150px;
+                top: 600px;
+                left: 90px;
+            }
         }
     }
 
@@ -85,10 +189,108 @@ div.container {
 
     & > div.review {
         @include Debug(rgb(87, 32, 197));
-    }
+        height: 940px;
+        // w
 
-    & > div.future {
-        @include Debug(rgb(32, 197, 137));
+        & > div.review_container {
+            @include Debug(rgb(32, 197, 139));
+            display: grid;
+            grid-template-columns: repeat(18, 1fr);
+            height: 100%;
+
+            & > div.grid-item {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border: 1px solid #ccc;
+                text-align: center;
+            }
+
+            & > div.content {
+                @include Square(100%);
+                & > div.container {
+                    // @include Square(100%);
+                    height: 100%;
+                    @include Flex();
+
+                    & > div.arrow {
+                        height: 100%;
+                        @include Square(100px);
+                        border: 1px solid black;
+                        @include GridCenter;
+                        border-radius: 50%;
+                        color: black;
+
+                        &:hover {
+                            background-color: black;
+                            border: none;
+                            color: white;
+                        }
+                    }
+
+                    & > div.mid {
+                        // width: 50%;
+                        @include Debug();
+                        flex-basis: 70%;
+                        @include GridCenter;
+
+                        & > div.mid_container {
+                            width: 90%;
+                            // @include Debug(green);
+
+                            & > div.cont {
+                                p {
+                                    font-size: 70px;
+                                }
+                            }
+
+                            & > div:nth-child(1) {
+                                // height: 200px;
+                                // height: 200px;
+                                // width: 100%;
+                                @include GridCenter;
+                                @include Square(100px);
+                                @include Debug(green);
+                                width: 100%;
+
+                                img {
+                                    height: 100px;
+                                width: 130px;
+                                    object-fit: fill;
+                                }
+                            }
+
+                            & > div.logo {
+                                // @include Debug(rgb(4, 0, 128));
+                                @include Flex();
+
+                                & > div {
+                                    margin-right: 30px;
+                                    @include Square(70px);
+                                    // @include Debug(rgb(4, 0, 128));
+                                    border-radius: 50%;
+                                    @include GridCenter;
+                                    font-size: 40px;
+                                    background-color: #FF4E00;
+                                    color: white;
+                                }
+
+                                & > p {
+                                    font-size:20px;
+                                }
+                            }
+                        }
+
+
+
+                        // & > div.cont {
+                        //     p {
+                        //         font-size: 70px;
+                        //     }
+                        // }
+                    }
+                }
+            }
+        }
     }
 
     & > div.w01 {
