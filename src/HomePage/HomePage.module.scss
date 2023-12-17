@@ -6,10 +6,6 @@
 // @import "../scss-builder/constants/color.scss";
 
 div.container {
-    // @include Flex(column);
-    // height: auto;
-    // width: 100vw;
-
     & > nav {
         height: auto;
     }
@@ -21,8 +17,8 @@ div.container {
     }
 
     & > body {
-        min-height: 5000px;
-        background-color: red;
+        // min-height: 5000px;
+        // background-color: red;
         @include Debug(green);
     }
 

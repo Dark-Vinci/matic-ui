@@ -40,7 +40,7 @@ const bbbbb: Array<Anim> = [
     }
 ]
 
-function MiniCard(): JSX.Element {
+export function MiniCard(): JSX.Element {
     return (
         <div className="container" 
             style={{ width: '640px', height: '160px', borderRadius: '30px'}}
@@ -100,44 +100,44 @@ export function Body(): JSX.Element {
                     button='01' 
                     buttonColor='#FFDFD0'
                 />
-            </div>
 
-            <div className={ style.mini_card_1 }>
-                <div className={ style.mini_card_1_container }>
-                    <div className={ style.f }>
-                        <MiniImageCard
-                            url='https://videos.ctfassets.net/6p328xbjc78k/1laowUZiYMioYNcJ5sHudz/eb744ebba2e88202d49450360e2ca866/cutting-edge-mess-and-surface-detection-v1.mp4'
-                            content='Cutting-edge mess and surface detection'
-                            contentBackgroundColor='#FFDFD0'
-                            length='480px'
-                        />
-                        fitst
-                    </div>
+                <div className={ style.mini_card_1 }>
+                    <div className={ style.mini_card_1_container }>
+                        <div className={ style.f }>
+                            <MiniImageCard
+                                url='https://videos.ctfassets.net/6p328xbjc78k/1laowUZiYMioYNcJ5sHudz/eb744ebba2e88202d49450360e2ca866/cutting-edge-mess-and-surface-detection-v1.mp4'
+                                content='Cutting-edge mess and surface detection'
+                                contentBackgroundColor='#FFDFD0'
+                                length='480px'
+                            />
+                            fitst
+                        </div>
 
-                    <div className={[style.a, style.a_1].join()}></div>
-                    <div className={style.a}></div>
-                    <div className={style.a}></div>
+                        <div className={[style.a, style.a_1].join()}></div>
+                        <div className={style.a}></div>
+                        <div className={style.a}></div>
 
-                    <div className={ style.s }>
-                        <MiniImageCard
-                            url='https://videos.ctfassets.net/6p328xbjc78k/Bln7bJwlQC8rSbayqS00p/7d67623b67ed417ca6cdef4b5f712380/works-on-all-home-surfaces-v1.mp4'
-                            content='Works on all floor surfaces'
-                            contentBackgroundColor='#FFDFD0'
-                            length='560px'
-                        />
-                    </div>
+                        <div className={ style.s }>
+                            <MiniImageCard
+                                url='https://videos.ctfassets.net/6p328xbjc78k/Bln7bJwlQC8rSbayqS00p/7d67623b67ed417ca6cdef4b5f712380/works-on-all-home-surfaces-v1.mp4'
+                                content='Works on all floor surfaces'
+                                contentBackgroundColor='#FFDFD0'
+                                length='560px'
+                            />
+                        </div>
 
-                    <div className={style.a}></div>
-                    <div className={style.a}></div>
-                    <div className={style.a}></div>
+                        <div className={style.a}></div>
+                        <div className={style.a}></div>
+                        <div className={style.a}></div>
 
-                    <div className={ style.l }>
-                        <MiniImageCard
-                            url='https://videos.ctfassets.net/6p328xbjc78k/50ZAQSwP8O9YwfahgtZxKV/885c8b31d7446fbee4c7f72cb7a86853/auto-toggles-between_mopping-and_vacuuming-video-v1.mp4'
-                            content='Auto-toggles between mopping and vacuuming'
-                            contentBackgroundColor='#FFDFD0'
-                            length='560px'
-                        />
+                        <div className={ style.l }>
+                            <MiniImageCard
+                                url='https://videos.ctfassets.net/6p328xbjc78k/50ZAQSwP8O9YwfahgtZxKV/885c8b31d7446fbee4c7f72cb7a86853/auto-toggles-between_mopping-and_vacuuming-video-v1.mp4'
+                                content='Auto-toggles between mopping and vacuuming'
+                                contentBackgroundColor='#FFDFD0'
+                                length='560px'
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -149,7 +149,39 @@ export function Body(): JSX.Element {
                     button='02'
                     buttonColor='#9EACFD'
                 />
+
+                <div className={style.w02_cont }>
+                    <div className={ style.one }>
+                        <MiniImageCard 
+                            url={'https://videos.ctfassets.net/6p328xbjc78k/2jPAxBXLu34oJUIAKWn3Vl/b2a329ca0286ab318a9edc701b29e996/patrols-your-home-with-3D-floor-mapping-v1.mp4'} 
+                            content={'Patrols your home with 3D floor mapping'} 
+                            contentBackgroundColor={'#9EACFD'} 
+                            length={'560px'}
+                        />
+                    </div>
+
+                    <div className={ style.two }>
+                        <MiniImageCard 
+                            url={'https://videos.ctfassets.net/6p328xbjc78k/3Dorxmxp9yjZOy3DBC0ncE/b2a935cde96e89d52602317e180d8ec4/Home_Matic_Is_Quiet.mp4'} 
+                            content={'Knows what to clean (and what to avoid)'} 
+                            contentBackgroundColor={'#9EACFD'} 
+                            length={'480px'}
+                        />
+                    </div>
+
+                    <div className={ style.three }>
+                        <MiniImageCard 
+                            url={'https://videos.ctfassets.net/6p328xbjc78k/7g7JcLcQ5vKfYqtkrm2HUN/8ebe08ec9ca2f27149b4c1985e280888/quiet-enough-for-work-time-and-nap-time-v1.mp4'} 
+                            content={'Quiet enough for work time and nap time'} 
+                            contentBackgroundColor={'#9EACFD'} 
+                            length={'800px'}
+                            width='800px'
+                            height='560px'
+                        />
+                    </div>
+                </div>
             </div>
+
             <div className={ style.w03 }>
                 <Numbered 
                     title='“Hey Matic, clean this!”' 
@@ -159,7 +191,7 @@ export function Body(): JSX.Element {
                 />
 
                 <div className={ style.cont }>
-                    <div className={style.f}>
+                    <div className={ style.f }>
                         <MiniImageCard 
                             url={'https://videos.ctfassets.net/6p328xbjc78k/4XCRxMejxAffI87kyVsq0D/00b34906482037ac88589d506a54cbb5/listens-to-your-voice-and-recognizes-gestures-v1.mp4'} 
                             content={'Listens to your voice and recognizes gestures'} 

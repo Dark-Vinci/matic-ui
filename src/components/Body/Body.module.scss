@@ -13,64 +13,51 @@ div.container {
     & > div {
         @include Debug(white);
         width: 100vw;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
         background-color: white;
     }
 
-    & > div.mini_card_1 {
-        max-width: 100vw;
-        margin-top: 100px;
-        // width: 100%;
-        @include Square(100%);
-        & > div.mini_card_1_container {
+    & > div.w02 {
+        @include GridCenter;
+
+        & > div.w02_cont {
             margin-top: 100px;
-            max-width: 100vw;
-            @include Square(100vw);
+            height: 1600px;
             position: relative;
+            width: 100vw;
 
             & > div {
                 position: absolute;
             }
 
-            & > div.a_1 {
-                width: 600px;
-                height: 600px;
-                border: 2px solid green;
-
-                top: 100px;
-                    left: 500px;
+            & > div.one {
+                top: 50px;
+                left: 90px;
             }
 
-            & > div.f {
-                top: 10px;
-                right: 700px;
-            }
-
-            & > div.s {
-                top: 500px;
-                left: 100px;
-            }
-
-            & > div.l {
-                top: 800px;
+            & > div.two {
+                top: 300px;
                 right: 600px;
+            }
+
+            & > div.three {
+                top: 920px;
+                left: calc(100vw/2 - 400px);
+                position: absolute;
+                transform: translate(-50%, -50%);
             }
         }
     }
 
-    & > div.w02 {
-        @include GridCenter;
-    }
-
     & > div.w03 {
         @include Flex(column);
-        @include Debug(rgb(87, 32, 197));
+        // @include Debug(rgb(87, 32, 197));
         height: 100%;
 
         & > div.cont {
-            @include Debug(rgb(32, 197, 59));
+            // @include Debug(rgb(32, 197, 59));
             margin-top: 100px;
-            height: 1200px;
+            height: 1100px;
             position: relative;
             width: 100vw;
 
@@ -85,15 +72,55 @@ div.container {
 
             & > div.s {
                 top: 500px;
-                left: 40px;
+                left: 80px;
             }
         }
-        // @include Square(auto)
     }
 
     & > div.w01 {
         // @include Debug(rgb(87, 32, 197));
         @include GridCenter;
+
+        & > div.mini_card_1 {
+            max-width: 100vw;
+            margin-top: 100px;
+            // width: 100%;
+            @include Square(100%);
+            & > div.mini_card_1_container {
+                margin-top: 100px;
+                max-width: 100vw;
+                @include Square(100vw);
+                position: relative;
+    
+                & > div {
+                    position: absolute;
+                }
+    
+                & > div.a_1 {
+                    width: 600px;
+                    height: 600px;
+                    border: 2px solid green;
+    
+                    top: 100px;
+                        left: 500px;
+                }
+    
+                & > div.f {
+                    top: 10px;
+                    right: 700px;
+                }
+    
+                & > div.s {
+                    top: 500px;
+                    left: 100px;
+                }
+    
+                & > div.l {
+                    top: 800px;
+                    right: 600px;
+                }
+            }
+        }
     }
 
     & > div.first {
