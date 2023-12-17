@@ -48,9 +48,23 @@ export function Body(): JSX.Element {
             </div>
 
             <div className={ style.w01 }>
-                <div className="w01_container">
-                    <div className="top"></div>
-                    <div className="bottom"></div>
+                <div className={style.w01_container }>
+                    {/* <div className={style.top }>hdjdm</div> */}
+                    <div className={style.button }>
+                        <p>01</p>
+                    </div>
+                    <div className={style.title }>
+                        <p>Mopping and vacuuming — Matic does it all.</p>
+                    </div>
+                    <div className={style.description }>
+                        <p>Matic’s state-of-the-art computer vision senses what’s around it, automatically switching between cleaning modes to get the job done.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className={ style.mini_card_1 }>
+                <div className={ style.mini_card_1_container }>
+                    the center;
                 </div>
             </div>
 
