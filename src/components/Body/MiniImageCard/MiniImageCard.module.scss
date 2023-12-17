@@ -4,11 +4,11 @@
 @import "../../../scss-builder/constants/color.scss";
 
 div.container {
-    @include Debug(blue);
+    // @include Debug(blue);
     @include GridCenter;
 
     & > div.card_container {
-        @include Debug(rgb(0, 255, 128));
+        // @include Debug(rgb(0, 255, 128));
         position: relative;
 
         & > div.content {
@@ -30,7 +30,7 @@ div.container {
         }
 
         & > div.video_container {
-            @include Debug(rgb(255, 0, 238));
+            // @include Debug(rgb(255, 0, 238));
             @include Square(100%);
             @include NoMarginOrPadding;
             position: absolute;
