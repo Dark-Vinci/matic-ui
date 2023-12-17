@@ -3,9 +3,56 @@ import { JSX, useEffect, useState } from 'react';
 import style from './Body.module.scss'
 import { VideoCard } from './VideoCard';
 import { MiniImageCard } from './MiniImageCard';
+import { Numbered } from './Numbered';
 
 const a = ['Playing hide-and-seek', 'Cooking meals together', 'Stargazing in the backyard', 'hosting game night'];
-const color = ['#016759', '#692729', 'rgb(2, 0, 128)', '#3E5A25']
+const color = ['#016759', '#692729', 'rgb(2, 0, 128)', '#3E5A25'];
+
+const nb = ['Post dinner clean.', 'Movie night.', 'After school snack.', 'Dog back from walk.'];
+
+interface Anim {
+    readonly imgUrl: string;
+    readonly text: string;
+    readonly timing: string;
+}
+
+const bbbbb: Array<Anim> = [
+    {
+        imgUrl: 'https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2Fm7a9X1YnkC3imclsoMqzo%2F7aaf7c0dc44d208227571f8a569ab188%2FBlockQouteVector2.png&w=3840&q=75',
+        text: 'Dog back from walk.',
+        timing: '9:30AM, LIVING ROOM, VACUUM',
+    },
+
+    {
+        imgUrl: 'https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F5dwVaOwxnEIczD7N4Jjt8b%2Fa13302a9d39ab5e0b0882b044ceb56ee%2FBlocQouteVector1.png&w=3840&q=75',
+        text: 'After school snack.',
+        timing: '3:00PM, KITCHEN, MOP',
+    },
+
+    {
+        imgUrl: 'https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2F1X1BA9kny15hBQRw6yrOyZ%2F172327fa7d5dd516d30a315022e76f1d%2FBlockQuoteVector3.png&w=3840&q=75',
+        text: 'Movie night.',
+        timing: '10:27PM, LIVING ROOM, VACUUM',
+    },
+
+    {
+        imgUrl: 'https://ds6fdpl176t97.cloudfront.net/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F6p328xbjc78k%2FjFq3fROIGsRUs3lEayLtK%2Fdcc2a1e32afb2ebb3586f60d370604af%2FBlockQuoteVector4.png&w=3840&q=75',
+        text: 'Post dinner clean.',
+        timing: '9:38PM, DINING ROOM, BOOTH',
+    }
+]
+
+function MiniCard(): JSX.Element {
+    return (
+        <div className="container" 
+            style={{ width: '640px', height: '160px', borderRadius: '30px'}}
+        >
+            <div className="min_container">
+                
+            </div>
+        </div>
+    );
+}
 
 
 export function Body(): JSX.Element {
@@ -49,18 +96,12 @@ export function Body(): JSX.Element {
             </div>
 
             <div className={ style.w01 }>
-                <div className={style.w01_container }>
-                    {/* <div className={style.top }>hdjdm</div> */}
-                    <div className={style.button }>
-                        <p>01</p>
-                    </div>
-                    <div className={style.title }>
-                        <p>Mopping and vacuuming — Matic does it all.</p>
-                    </div>
-                    <div className={style.description }>
-                        <p>Matic’s state-of-the-art computer vision senses what’s around it, automatically switching between cleaning modes to get the job done.</p>
-                    </div>
-                </div>
+                <Numbered 
+                    title='Mopping and vacuuming — Matic does it all' 
+                    description='Matic’s state-of-the-art computer vision senses what’s around it, automatically switching between cleaning modes to get the job done.' 
+                    button='01' 
+                    buttonColor='#FFDFD0'
+                />
             </div>
 
             <div className={ style.mini_card_1 }>
@@ -75,6 +116,10 @@ export function Body(): JSX.Element {
                         fitst
                     </div>
 
+                    <div className={[style.a, style.a_1].join()}></div>
+                    <div className={style.a}></div>
+                    <div className={style.a}></div>
+
                     <div className={ style.s }>
                         <MiniImageCard
                             url='https://videos.ctfassets.net/6p328xbjc78k/Bln7bJwlQC8rSbayqS00p/7d67623b67ed417ca6cdef4b5f712380/works-on-all-home-surfaces-v1.mp4'
@@ -83,6 +128,10 @@ export function Body(): JSX.Element {
                             length='560px'
                         />
                     </div>
+
+                    <div className={style.a}></div>
+                    <div className={style.a}></div>
+                    <div className={style.a}></div>
 
                     <div className={ style.l }>
                         <MiniImageCard
@@ -95,8 +144,48 @@ export function Body(): JSX.Element {
                 </div>
             </div>
 
-            <div className={ style.w02 }>02</div>
-            <div className={ style.w03 }>03</div>
+            <div className={ style.w02 }>
+                <Numbered 
+                    title='Learns nonstop. Cleans nonstop. No supervision necessary.' 
+                    description='Matic’s on patrol 24/7, quietly working around the clock for a continuous clean. Watch Matic because you want to, not because you have to.' 
+                    button='02'
+                    buttonColor='#9EACFD'
+                />
+            </div>
+            <div className={ style.w03 }>
+                <Numbered 
+                    title='“Hey Matic, clean this!”' 
+                    description='Matic responds to your voice and gestures. Create a routine in the app or just point and tell Matic where to go. Your house, your rules.' 
+                    button='03'
+                    buttonColor='#FFE894'
+                />
+
+                <div className={ style.cont }>
+                    <div className={style.f}>
+                        <MiniImageCard 
+                            url={'https://videos.ctfassets.net/6p328xbjc78k/4XCRxMejxAffI87kyVsq0D/00b34906482037ac88589d506a54cbb5/listens-to-your-voice-and-recognizes-gestures-v1.mp4'} 
+                            content={'Listens to your voice and recognizes gestures'} 
+                            contentBackgroundColor={'#FFE894'} 
+                            length={'640px'}
+                        />
+                    </div>
+
+                    <div className={style.s}>
+                        <MiniImageCard 
+                            url={'https://videos.ctfassets.net/6p328xbjc78k/2jPAxBXLu34oJUIAKWn3Vl/b2a329ca0286ab318a9edc701b29e996/patrols-your-home-with-3D-floor-mapping-v1.mp4'} 
+                            content={'Easy in-app scheduling'} 
+                            contentBackgroundColor={'#FFE894'} 
+                            length={'495px'} 
+                        />
+                    </div>
+
+                    <div className="t">
+                        <div className="t_container">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div className={ style.real_mess}>
                 <div className={ style.real_mess_container}>

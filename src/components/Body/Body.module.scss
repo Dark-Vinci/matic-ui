@@ -32,6 +32,15 @@ div.container {
                 position: absolute;
             }
 
+            & > div.a_1 {
+                width: 600px;
+                height: 600px;
+                border: 2px solid green;
+
+                top: 100px;
+                    left: 500px;
+            }
+
             & > div.f {
                 top: 10px;
                 right: 700px;
@@ -44,54 +53,47 @@ div.container {
 
             & > div.l {
                 top: 800px;
-                // left: 100px;
                 right: 600px;
             }
-            // @include Flex(column, space-around, center);
         }
+    }
+
+    & > div.w02 {
+        @include GridCenter;
+    }
+
+    & > div.w03 {
+        @include Flex(column);
+        @include Debug(rgb(87, 32, 197));
+        height: 100%;
+
+        & > div.cont {
+            @include Debug(rgb(32, 197, 59));
+            margin-top: 100px;
+            height: 1200px;
+            position: relative;
+            width: 100vw;
+
+            & > div {
+                position: absolute;
+            }
+
+            & > div.f {
+                top: 50px;
+                right: 740px;
+            }
+
+            & > div.s {
+                top: 500px;
+                left: 40px;
+            }
+        }
+        // @include Square(auto)
     }
 
     & > div.w01 {
         // @include Debug(rgb(87, 32, 197));
         @include GridCenter;
-
-        & > div.w01_container {
-            @include Flex(column);
-            width: calc(100vw - 400px);
-            // margin-bottom: 50px;
-            // @include Debug(rgb(32, 197, 59));
-
-            & > div {
-                margin-bottom: 30px;
-            }
-
-            & > div.title {
-                @include Square(100%);
-                width: 831px;
-                p {
-                    font-size: 60px;
-                }
-            }
-
-            & > div.description {
-                width: 611px;
-                font-size: 20px;
-                color: #3B3C3E;
-            }
-
-            & > div.button {
-                // @include Debug(rgb(48, 32, 197));
-                @include GridCenter;
-                @include Square(100%);
-
-                p {
-                    @include GridCenter;
-                    @include Square(50px);
-                    background-color: $number-button-color;
-                    border-radius: 10px;
-                }
-            }
-        }
     }
 
     & > div.first {

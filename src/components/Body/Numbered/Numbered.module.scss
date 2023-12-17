@@ -1,0 +1,44 @@
+@import "../../../scss-builder/mixins/layout.scss";
+@import "../../../scss-builder/mixins/border.scss";
+@import "../../../scss-builder/mixins/center.scss";
+@import "../../../scss-builder/constants/color.scss";
+
+div.container {
+    & > div.w_container {
+        @include Flex(column);
+        width: calc(100vw - 400px);
+        // margin-bottom: 50px;
+        // @include Debug(rgb(32, 197, 59));
+
+        & > div {
+            margin-bottom: 30px;
+        }
+
+        & > div.title {
+            @include Square(100%);
+            width: 831px;
+            p {
+                font-size: 60px;
+            }
+        }
+
+        & > div.description {
+            width: 611px;
+            font-size: 20px;
+            color: #3B3C3E;
+        }
+
+        & > div.button {
+            // @include Debug(rgb(48, 32, 197));
+            @include GridCenter;
+            @include Square(100%);
+
+            p {
+                @include GridCenter;
+                @include Square(50px);
+                // background-color: $number-button-color;
+                border-radius: 10px;
+            }
+        }
+    }
+}
